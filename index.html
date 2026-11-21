@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم مذاق عدن | أصالة المطبخ اليمني</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>مذاق عدن</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">قائمة الطعام</a>
+                <a href="#main-dishes">الوجبات الرئيسية</a>
+                <a href="#appetizers-drinks">المقبلات والمشروبات</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">التواصل والموقع</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart-btn" aria-label="سلة الطلبات">
+                    <span>🛒 السلة</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="القائمة">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. الواجهة الرئيسية -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <span class="hero-subtitle">أصالة الضيافة اليمنية</span>
+            <h1 class="hero-title">مطعم مذاق عدن</h1>
+            <p class="hero-description">
+                نأخذكم في رحلة عبر نكهات عدن واليمن الأصيلة؛ حيث يُعدّ المندي، الزربيان، والفحسة على الحطب وبأجود البهارات اليمنية الفاخرة.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">استكشف العارض التفاعلي</a>
+                <a href="https://wa.me/967770000000?text=مرحباً%20مطعم%20مذاق%20عدن،%20أرغب%20في%20الاستفسار%20عن%20الطلبات" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    اطلب عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. قسم العارض التفاعلي الفاخر للوجبات (المعدل حسب الطلب) -->
+    <section class="section interactive-showcase-section" id="menu">
+        <!-- الخلفية الثابتة الخافتة من صور الوجبات المصغرة -->
+        <div class="showcase-bg-collage" id="showcase-bg-collage"></div>
+        <div class="showcase-overlay"></div>
+
+        <div class="container showcase-container">
+            <div class="section-header fade-in light-text">
+                <span class="section-tag gold-tag">العارض التفاعلي</span>
+                <h2 class="section-title">تجربة عرض الوجبات الفاخرة</h2>
+                <p class="section-desc">اسحب أو تنقل يميناً ويساراً لاستعراض أطباقنا الشهية بوضوح تام.</p>
+            </div>
+
+            <!-- منصة العارض التفاعلي الرئيسي -->
+            <div class="showcase-stage fade-in" id="showcase-stage">
+                <button class="showcase-nav-btn prev-btn" id="showcase-prev" aria-label="السابق">❮</button>
+                
+                <div class="showcase-card-viewport">
+                    <div class="showcase-active-card" id="showcase-active-card">
+                        <!-- يتم حقن بيانات الوجبة الحالية ديناميكياً عبر JavaScript -->
+                    </div>
+                </div>
+
+                <button class="showcase-nav-btn next-btn" id="showcase-next" aria-label="التالي">❯</button>
+            </div>
+
+            <!-- مؤشرات النقاط للتنقل السريع -->
+            <div class="showcase-dots" id="showcase-dots"></div>
+        </div>
+    </section>
+
+    <!-- 3. قسم الوجبات الرئيسية (محافظ عليه بالكامل) -->
+    <section class="section main-dishes-section" id="main-dishes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">أطباقنا المميزة</span>
+                <h2 class="section-title">الوجبات الرئيسية</h2>
+                <p class="section-desc">أشهر الأطباق اليمنية التقليدية المطهوة بعناية على الطريقة العدنية والصنعانية الأصيلة.</p>
+            </div>
+
+            <div class="menu-grid" id="main-dishes-grid">
+                <!-- يتم تعبئتها تلقائياً عبر JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. قسم المقبلات والمشروبات (محافظ عليه بالكامل) -->
+    <section class="section appetizers-section" id="appetizers-drinks">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">إضافات تكمل المائدة</span>
+                <h2 class="section-title">المقبلات والمشروبات</h2>
+                <p class="section-desc">مقبلات يمنية طازجة، خبز التنور الساخن، ومشروبات تقليدية منعشة.</p>
+            </div>
+
+            <div class="menu-grid" id="appetizers-drinks-grid">
+                <!-- يتم تعبئتها تلقائياً عبر JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. قسم من نحن -->
+    <section class="section about-section" id="about">
+        <div class="container about-container">
+            <div class="about-image fade-in">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="أجواء مطعم مذاق عدن" loading="lazy">
+                <div class="experience-badge">
+                    <span class="exp-number">+15</span>
+                    <span class="exp-text">عاماً من الأصالة</span>
+                </div>
+            </div>
+            <div class="about-content fade-in">
+                <span class="section-tag">قصتنا</span>
+                <h2 class="section-title">عن مطعم مذاق عدن</h2>
+                <p>
+                    تأسس مطعم <strong>"مذاق عدن"</strong> ليكون جسراً يربط عشاق الطعام بالتراث الغذائي اليمني العريق. نحن نؤمن بأن سر الطعم الاستثنائي يكمن في اختيار أجود أنواع اللحوم الطازجة، والأرز الفاخر، وخلطات البهارات اليمنية الخاصة التي نطحنها بأنفسنا يومياً.
+                </p>
+                <p>
+                    نجمع بين كرم الضيافة العدنية الدافئة ومعايير الجودة والنظافة العصرية لنقدم لكم تجربة طعام لا تُنسى سواء داخل صالاتنا العائلية أو عبر التوصيل السريع.
+                </p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🔥</span>
+                        <div>
+                            <h4>طهي تقليدي</h4>
+                            <p>أفران تنور وحطب أصيلة</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🌿</span>
+                        <div>
+                            <h4>مكونات طازجة</h4>
+                            <p>لحوم وخضروات يومية 100%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. معلومات التواصل وموقع المطعم -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">زورونا أو اطلبوا الآن</span>
+                <h2 class="section-title">معلومات التواصل وموقع المطعم</h2>
+                <p class="section-desc">نسعد باستقبالكم طوال أيام الأسبوع أو استلام طلباتكم عبر الواتساب والاتصال المباشر.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h3>عنوان المطعم</h3>
+                            <p>عدن - كريتر، شارع أروى الرئيسي، بجوار بريد عدن المركزي</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">🕒</div>
+                        <div>
+                            <h3>ساعات العمل</h3>
+                            <p>يومياً من الساعة 11:00 صباحاً حتى 12:00 منتصف الليل</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h3>الهاتف وواتساب</h3>
+                            <p dir="ltr" style="text-align: right;">+967 770 000 000 / 02-250000</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. زر واضح للطلب عبر واتساب -->
+                    <a href="https://wa.me/967770000000?text=مرحباً%20مطعم%20مذاق%20عدن،%20أود%20تقديم%20طلب%20جديد" target="_blank" rel="noopener" class="btn btn-whatsapp btn-large">
+                        <span>💬 اطلب الآن مباشرة عبر واتساب</span>
+                    </a>
+                </div>
+
+                <div class="map-box fade-in">
+                    <iframe 
+                        title="موقع مطعم مذاق عدن"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=45.0200%2C12.7700%2C45.0450%2C12.7850&amp;layer=mapnik&amp;marker=12.7775%2C45.0325" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>✦ مطعم مذاق عدن</h3>
+                <p>نكهة يمنية أصيلة تجمعنا على مائدة واحدة.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">قائمة الطعام</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">التواصل</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 مطعم مذاق عدن. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر واتساب عائم دائم -->
+    <a href="https://wa.me/967770000000?text=مرحباً%20مطعم%20مذاق%20عدن،%20أرغب%20في%20الطلب" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="تواصل عبر واتساب">
+        <span>واتساب</span>
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor">
+            <path d="M16 2C8.28 2 2 8.28 2 16c0 2.47.65 4.88 1.88 7.01L2 30l7.18-1.84C11.24 29.36 13.59 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.45c-2.16 0-4.27-.58-6.11-1.68l-.44-.26-4.55 1.16 1.2-4.43-.29-.46A11.39 11.39 0 0 1 4.55 16C4.55 9.68 9.68 4.55 16 4.55S27.45 9.68 27.45 16 22.32 27.45 16 27.45zm6.27-8.54c-.34-.17-2.03-1-2.35-1.12-.31-.11-.54-.17-.77.17-.23.34-.88 1.12-1.08 1.35-.2.23-.4.26-.74.09-.34-.17-1.45-.53-2.76-1.7-1.02-.91-1.71-2.03-1.91-2.38-.2-.34-.02-.53.15-.7.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.54-.28-.67-.56-.58-.77-.59h-.66c-.23 0-.6.09-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.69 1.23 3.32 1.4 3.55.17.23 2.42 3.69 5.86 5.18.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.08-.14-.31-.23-.65-.4z"/>
+        </svg>
+    </a>
+
+    <!-- نافذة سلة الطلبات الجانبية لإرسال الطلب جاهزاً عبر واتساب -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>سلة طلباتك</h3>
+            <button class="close-cart" id="close-cart-btn" aria-label="إغلاق">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart-msg">سلة الطلبات فارغة حالياً. أضف أطباقك المفضلة من القائمة!</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>الإجمالي التقديري:</span>
+                <strong id="cart-total-price">0 ريال</strong>
+            </div>
+            <div class="customer-note">
+                <input type="text" id="customer-address" placeholder="أدخل عنوان التوصيل أو رقم الطاولة (اختياري)">
+            </div>
+            <button class="btn btn-whatsapp btn-block" id="checkout-whatsapp-btn">
+                إرسال الطلب عبر واتساب
+            </button>
+        </div>
+    </aside>
+
+    <!-- إشعار منبثق عند الإضافة للسلة -->
+    <div class="toast" id="toast">تمت إضافة الطبق إلى سلة الطلبات</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
